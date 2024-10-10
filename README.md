@@ -9,6 +9,14 @@
 
 - Execute o seguinte comando para instalar as dependências necessárias: `composer install`
 
+- Execute o comando `npm install` para instalar as dependências necessárias.
+
+- Execute o comando `php artisan key:generate` para gerar uma chave de aplicação.
+
+- Execute o comando `npm run build` para compilar os arquivos.
+
+- Execute o seguinte comando para instalar as migrate necessárias: `php artisan migrate` verifique se o banco de dados foi criado e se a tabela foi criada. utilize o diretorio `database\dump` para auxiliar caso precise de ajuda.
+
 2. **Banco de Dados**:
 
 - A estrutura do banco de dados está disponível no arquivo `database/dump/db_inovcorp_products.sql` na pasta database. Certifique-se de importar essa estrutura antes de iniciar o aplicativo.
@@ -16,8 +24,12 @@
 3. **Configuração do Ambiente**:
 
 - Crie um arquivo chamado `.env` na raiz do projeto.
+
 - Para ajudá-lo a configurar seu arquivo `.env`, você pode consultar o exemplo fornecido em `env.example.php`.
+
 - Certifique-se de que o arquivo `.env` esteja configurado corretamente com suas credenciais do banco de dados e smtp.
+
+- Certifique-se que o banco anco de dados foi criado e se a tabela foi criada com os campos corretos. utilize o diretorio `database\dump` para auxiliar caso precise de ajuda.
 
 ## Project
 
@@ -31,8 +43,6 @@
 
 ## Instruter
 
-- Execute o seguinte comando para instalar as migrate necessárias: `php artisan migrate` verifique se o banco de dados foi criado e se a tabela foi criada. utilize o diretorio `database\dump` para auxiliar caso precise de ajuda.
-
 - para rondar o projeto front-end utilize o comando composer start ou php artsian serve, não esqueça de vereficar se o comando será executado na pasta principal do projeto.
 
 - Apos startar a aplicação, acesse em http://localhost:8000/register para se cadastrar
@@ -41,15 +51,21 @@
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## commados
+## commados aplication
 
-composer install
-php artisan migrate
-php artisan route:clear
-php artisan route:cache
-php artisan config:clear
-php artisan view:clear
-php artisan key:generate
-php artisan config:cache
-php artisan migrate
-composer start
+- npm install
+- composer install
+- php artisan migrate
+- php artisan key:generate
+- npm run build
+
+## commados clear
+
+- php artisan route:clear
+- php artisan route:cache
+- php artisan config:clear
+- php artisan view:clear
+-
+- php artisan config:cache
+- php artisan migrate
+  composer start
