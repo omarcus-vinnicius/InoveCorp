@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+input{
+    padding: 5px;
+    font: 0.6em sans-serif;
+    font-weight: 500;
+}
+
+td{
+    width: 100px;
+    height: auto;
+}
+
+
+td .img_table{
+    display: flex;
+    width: 80%;
+}
+
+.button_table{
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

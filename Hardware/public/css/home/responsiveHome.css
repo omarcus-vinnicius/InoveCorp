@@ -1,0 +1,78 @@
+@media (max-width: 1200px) {
+
+    main,body{
+        background-color: #1e1e1e;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #form_home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .container_photo_products,
+    .container_input_produtcs {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+
+    .container_photo_products span{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+    }
+
+   .container_input{
+        width: 90%;
+        color: #fff;
+    }
+
+    .send_product {
+        width: 120px;
+        border: 1px #1E1E1E solid;
+        border-radius: 5px;
+        background-color: #ffffff;
+        font: 0.7em sans-serif;
+        color: #1E1E1E;
+        justify-content: end;
+        align-items: end;
+
+    }
+    
+    .container_search .container_input {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        height: 100%;
+    }
+
+    .container_search .container_input input {
+        width: 60%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .container_table {
+        width: 90%;
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+
+    td img {
+        width: 30px;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+
+}
