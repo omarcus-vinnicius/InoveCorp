@@ -81,8 +81,8 @@ class HomeController extends Controller
 
             if ($request->hasFile('image') && $request->file('image')->isValid()) {
                 $image = $request->file('image');
-                $imageName = time() . '.' . $image->getClientOriginalExtension();
-                $request->image->move(public_path('imageProducts'), $imageName);
+                $imageName = $image->getClientOriginalName();
+                $request->image->move(public_path('imageProducts'));
                 $request->image = $imageName;
             }
 

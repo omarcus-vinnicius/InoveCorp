@@ -13,7 +13,7 @@ Route::get('/register', function () {
 })->name('register');
 
 Route::get('/dashboard', function () {
-    return view('auth.two-factor');
+    return redirect('/two-factor');
 });
 
 Route::middleware(['auth'])->group(function () {
