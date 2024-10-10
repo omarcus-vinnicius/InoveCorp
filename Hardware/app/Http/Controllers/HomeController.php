@@ -73,7 +73,7 @@ class HomeController extends Controller
 
     public function updates(Request $request)
     {
-
+        $imageName = '';
         if (
             isset($request->mark) || !empty($request->mark) ||
             isset($request->model) || !empty($request->model)
@@ -87,7 +87,7 @@ class HomeController extends Controller
             }
 
             $model = new Products();
-            $res = $model->UpdateProduct($request);
+            $res = $model->updateProduct($request);
 
             if ($res) {
                 $res = redirect('/home')->with('success', 'Products to update successfully');
