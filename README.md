@@ -25,7 +25,7 @@
 
 - Execute o comando `npm run build` para compilar os arquivos.
 
-- Execute o seguinte comando para instalar as migrate necessárias: `php artisan migrate` verifique se o banco de dados foi criado e se a tabela foi criada. utilize o diretorio `database\dump` para auxiliar caso precise de ajuda.
+- Execute o seguinte comando caso precise para instalar as migrate necessárias: `php artisan migrate` verifique se o banco de dados foi criado e se a tabela foi criada. utilize o diretorio `database\dump` para auxiliar caso precise de ajuda.
 
 3. **Banco de Dados**:
 
