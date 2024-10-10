@@ -56,11 +56,10 @@ class Products extends Model
 
     }
 
-    public function updateProduct($request, Model $model)
+    public function updateProduct($request)
     {
 
         try {
-
             $res = Products::findOrFail($request->id)->update($request->all());
 
         } catch (Exception $ex) {

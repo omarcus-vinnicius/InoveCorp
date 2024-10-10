@@ -84,12 +84,10 @@ class HomeController extends Controller
                 $imageName = time() . '.' . $image->getClientOriginalExtension();
                 $request->image->move(public_path('imageProducts'), $imageName);
                 $request->image = $imageName;
-
             }
 
-            return var_dump($request->image);
             $model = new Products();
-            $res = $model->UpdateProduct($request, $model);
+            $res = $model->UpdateProduct($request);
 
             if ($res) {
                 $res = redirect('/home')->with('success', 'Products to update successfully');

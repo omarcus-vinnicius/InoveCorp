@@ -35,6 +35,6 @@ class TwoFactorController extends Controller
             return redirect()->intended('/home');
         }
 
-        return redirect()->route('two-factor.index')->withErrors(['code' => 'The provided code is  incorrect']);
+        return redirect('/two-factor')->withErrors(['code' => 'The provided code is  incorrect']);
     }
 }
