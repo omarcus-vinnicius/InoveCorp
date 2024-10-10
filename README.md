@@ -5,7 +5,7 @@
 - Laravel Jetstream
 - xampp
 
-- 1. **Configuração do Ambiente**:
+1. **Configuração do Ambiente**:
 
 - Crie um arquivo chamado `.env` na raiz do projeto.
 
