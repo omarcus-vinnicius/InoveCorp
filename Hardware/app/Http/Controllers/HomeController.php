@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products;
+use Auth;
 use Event;
 use Illuminate\Http\Request;
 
@@ -10,9 +11,14 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $model = new Products();
-        $res = $model::all();
-        return view('home.home', ['products' => $res]);
+
+        $res = Auth::check();
+        if ($res) {
+            $model = new Products();
+            $res = $model::all();
+            return view('home.home', ['products' => $res]);
+        }
+
     }
 
     public function create(Request $request)
@@ -96,5 +102,14 @@ class HomeController extends Controller
         }
 
         return $res;
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/login');
     }
 }

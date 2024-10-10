@@ -49,18 +49,7 @@ php artisan route:clear
 php artisan route:cache
 php artisan config:clear
 php artisan view:clear
-php artisan optimize --force
+php artisan key:generate
 php artisan config:cache
 php artisan migrate
 composer start
-
-Schema::create('products', function (Blueprint $table) {
-$table->id();
-$table->string('mark')->nullable();
-$table->string('model_product')->nullable();
-$table->string('image');
-$table->string('serial_number');
-$table->text('description');
-$table->dateTime('updated_at');
-$table->dateTime('created_at');
-});

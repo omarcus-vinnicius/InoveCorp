@@ -18,7 +18,7 @@
             <li class="link_logout">
                 <form method="POST" class="logout" action="/logout">
                     @csrf
-                    <a href="/" class="logout" onclick=" this.closest('form').submit();">
+                    <a href="/logout" class="logout">
                         LOGOUT
                     </a>
                 </form>
