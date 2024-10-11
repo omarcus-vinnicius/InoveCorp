@@ -128,7 +128,7 @@ input::file-selector-button {
 
 .container_search{
     display: flex;
-    width: 80%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     margin-bottom: 12px;
@@ -149,8 +149,8 @@ input::file-selector-button {
     height: 100%;
 }
 
-.container_search .container_input input{
-    width: 40%;
+.container_search .container_input .input_text{
+    width: 200px;
 }
 
 .container_table{

@@ -40,7 +40,7 @@ class Products extends Model
         try {
 
             $model->mark = $request->mark;
-            $model->model_product = $request->model;
+            $model->model_product = $request->model_product;
             $model->image = $request->image;
             $model->serial_number = $request->serial_number;
             $model->description = $request->description;
@@ -81,6 +81,18 @@ class Products extends Model
     public function getProduts($id)
     {
         $res = Products::findOrFail($id);
+        return $res;
+    }
+
+
+    public function getProdutsID($search)
+    {
+        $res = Products::where(
+            'mark',
+            'like',
+            '%' . $search . '%'
+        )->orWhere('model_product', 'like', '%' . $search . '%')->get();
+
         return $res;
     }
 }

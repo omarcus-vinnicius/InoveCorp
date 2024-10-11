@@ -13,10 +13,24 @@ class HomeController extends Controller
     {
 
         $res = Auth::check();
+        $search = request('search');
+
         if ($res) {
             $model = new Products();
-            $res = $model::all();
-            return view('home.home', ['products' => $res]);
+
+            if ($search) {
+
+                $res = $model->getProdutsID($search);
+
+                return view('home.home', ['products' => $res, 'search' => $search]);
+
+            } else {
+                $search = '';
+                $res = $model::all();
+                return view('home.home', ['products' => $res, 'search' => $search]);
+            }
+
+
         }
 
     }
@@ -81,11 +95,10 @@ class HomeController extends Controller
 
             if ($request->hasFile('image') && $request->file('image')->isValid()) {
                 $image = $request->file('image');
-                $imageName = $image->getClientOriginalName();
-                $request->image->move(public_path('imageProducts'));
+                $imageName = time() . '.' . $image->getClientOriginalExtension();
+                $request->image->move(public_path('imageProducts'), $imageName);
                 $request->image = $imageName;
             }
-
             $model = new Products();
             $res = $model->updateProduct($request);
 

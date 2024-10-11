@@ -99,7 +99,7 @@
 
                     <span class="container_input">
                         <label>Model :</label>
-                        <input type="text" id="input_model" name="model" class="input_text" />
+                        <input type="text" id="input_model" name="model_product" class="input_text" />
                     </span>
 
                     <span class="container_input">
@@ -115,8 +115,15 @@
 
         <div class="container_search">
             <span class="container_input">
-                <label>Search :</label>
-                <input type="text" id="input_search" name="search" class="input_text" placeholder="search..." />
+                <form action="/home" method="GET" class="container_input">
+                    <label>Search :</label>
+                    <div>
+                        <input type="text" id="input_search" value="" name="search" class="input_text"
+                            placeholder="search..." />
+                        <input type="submit" class="btn btn-secondary" value="search" />
+                        <a href="/home" class="btn btn-danger">Cleare</a>
+                    </div>
+                </form>
             </span>
         </div>
 

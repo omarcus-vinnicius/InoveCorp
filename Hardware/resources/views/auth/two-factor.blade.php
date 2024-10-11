@@ -20,6 +20,8 @@
                 <label>Two Factor Code</label>
                 <input type="text" name="code" id="code" />
                 <button type="submit" class="btn btn-light">Send</button>
+
+                <a href="/two-factor" class="btn btn-dark"> Resend code</a>
             </div>
         </form>
     </body>
